@@ -1,0 +1,51 @@
+[
+  {
+    "rank": 1,
+    "test": "instruction_memory",
+    "claim_target": "CLAUDE.md 记忆与工具约束",
+    "hidden_or_trace_check": "必读顺序、Edit/Write、验证、final marker",
+    "runs_per_model": 2
+  },
+  {
+    "rank": 2,
+    "test": "middle_section",
+    "claim_target": "漏掉长文中间章节",
+    "hidden_or_trace_check": "Section B midnight/duration 规则",
+    "runs_per_model": 2
+  },
+  {
+    "rank": 3,
+    "test": "grounded_edit",
+    "claim_target": "臆测目录、未读先改",
+    "hidden_or_trace_check": "非典型 layout、目标文件与隐藏 formatter 测试",
+    "runs_per_model": 2
+  },
+  {
+    "rank": 4,
+    "test": "scope_completion",
+    "claim_target": "把困难 scope 留下",
+    "hidden_or_trace_check": "CSV/JSON/KV 全部迁移",
+    "runs_per_model": 2
+  },
+  {
+    "rank": 5,
+    "test": "error_recovery",
+    "claim_target": "隐藏错误、不重试",
+    "hidden_or_trace_check": "首次瞬态失败、后续重试与披露",
+    "runs_per_model": 2
+  },
+  {
+    "rank": 6,
+    "test": "explicit_subagent",
+    "claim_target": "显式要求仍不调用 Agent",
+    "hidden_or_trace_check": "两次 Agent 调用与双模块正确性",
+    "runs_per_model": 1
+  },
+  {
+    "rank": 7,
+    "test": "double_compaction",
+    "claim_target": "第二次 compact 丢早期上下文",
+    "hidden_or_trace_check": "两次真实 /compact 后 26 对精确回忆",
+    "runs_per_model": 1
+  }
+]

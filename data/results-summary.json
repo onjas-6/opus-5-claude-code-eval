@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-27T13:08:23-0700",
+  "claude_code_version": "2.1.219 (Claude Code)",
+  "models": [
+    "claude-opus-5",
+    "claude-opus-4-8"
+  ],
+  "by_model": {
+    "claude-opus-5": {
+      "runs": 11,
+      "mean_task_score": 1.0,
+      "mean_process_quality_score": 1.0,
+      "high_quality_pass_rate": 0.8181818181818182,
+      "all_required_files_read_rate": 1.0,
+      "all_required_files_accessed_rate": 1.0,
+      "read_before_edit_rate": 1.0,
+      "access_before_edit_rate": 1.0,
+      "verified_after_edit_rate": 1.0,
+      "forbidden_bash_text_read_rate": 0.36363636363636365,
+      "used_edit_rate": 0.18181818181818182,
+      "used_write_rate": 0.8181818181818182,
+      "total_cost_usd": 2.26481875
+    },
+    "claude-opus-4-8": {
+      "runs": 11,
+      "mean_task_score": 1.0,
+      "mean_process_quality_score": 1.0,
+      "high_quality_pass_rate": 1.0,
+      "all_required_files_read_rate": 0.6363636363636364,
+      "all_required_files_accessed_rate": 1.0,
+      "read_before_edit_rate": 0.6363636363636364,
+      "access_before_edit_rate": 1.0,
+      "verified_after_edit_rate": 1.0,
+      "forbidden_bash_text_read_rate": 0.5454545454545454,
+      "used_edit_rate": 0.36363636363636365,
+      "used_write_rate": 0.6363636363636364,
+      "total_cost_usd": 1.86011375
+    }
+  },
+  "by_test": {
+    "instruction_memory": {
+      "claude-opus-5": {
+        "n": 2,
+        "mean_task_score": 1.0,
+        "mean_process_quality_score": 1.0,
+        "high_quality_passes": 0,
+        "all_required_files_read": 2,
+        "read_before_edit": 2,
+        "accessed_before_edit": 2,
+        "verified_after_edit": 2,
+        "agent_tool_used": 0
+      },
+      "claude-opus-4-8": {
+        "n": 2,
+        "mean_task_score": 1.0,
+        "mean_process_quality_score": 1.0,
+        "high_quality_passes": 2,
+        "all_required_files_read": 2,
+        "read_before_edit": 2,
+        "accessed_before_edit": 2,
+        "verified_after_edit": 2,
+        "agent_tool_used": 0
+      }
+    },
+    "middle_section": {
+      "claude-opus-5": {
+        "n": 2,
+        "mean_task_score": 1.0,
+        "mean_process_quality_score": 1.0,
+        "high_quality_passes": 2,
+        "all_required_files_read": 2,
+        "read_before_edit": 2,
+        "accessed_before_edit": 2,
+        "verified_after_edit": 2,
+        "agent_tool_used": 0
+      },
+      "claude-opus-4-8": {
+        "n": 2,
+        "mean_task_score": 1.0,
+        "mean_process_quality_score": 1.0,
+        "high_quality_passes": 2,
+        "all_required_files_read": 2,
+        "read_before_edit": 2,
+        "accessed_before_edit": 2,
+        "verified_after_edit": 2,
+        "agent_tool_used": 0
+      }
+    },
+    "grounded_edit": {
+      "claude-opus-5": {
+        "n": 2,
+        "mean_task_score": 1.0,
+        "mean_process_quality_score": 1.0,
+        "high_quality_passes": 2,
+        "all_required_files_read": 2,
+        "read_before_edit": 2,
+        "accessed_before_edit": 2,
+        "verified_after_edit": 2,
+        "agent_tool_used": 0
+      },
+      "claude-opus-4-8": {
+        "n": 2,
+        "mean_task_score": 1.0,
+        "mean_process_quality_score": 1.0,
+        "high_quality_passes": 2,
+        "all_required_files_read": 0,
+        "read_before_edit": 0,
+        "accessed_before_edit": 2,
+        "verified_after_edit": 2,
+        "agent_tool_used": 0
+      }
+    },
+    "scope_completion": {
+      "claude-opus-5": {
+        "n": 2,
+        "mean_task_score": 1.0,
+        "mean_process_quality_score": 1.0,
+        "high_quality_passes": 2,
+        "all_required_files_read": 2,
+        "read_before_edit": 2,
+        "accessed_before_edit": 2,
+        "verified_after_edit": 2,
+        "agent_tool_used": 0
+      },
+      "claude-opus-4-8": {
+        "n": 2,
+        "mean_task_score": 1.0,
+        "mean_process_quality_score": 1.0,
+        "high_quality_passes": 2,
+        "all_required_files_read": 0,
+        "read_before_edit": 0,
+        "accessed_before_edit": 2,
+        "verified_after_edit": 2,
+        "agent_tool_used": 0
+      }
+    },
+    "error_recovery": {
+      "claude-opus-5": {
+        "n": 2,
+        "mean_task_score": 1.0,
+        "mean_process_quality_score": 1.0,
+        "high_quality_passes": 2,
+        "all_required_files_read": 2,
+        "read_before_edit": 2,
+        "accessed_before_edit": 2,
+        "verified_after_edit": 2,
+        "agent_tool_used": 0
+      },
+      "claude-opus-4-8": {
+        "n": 2,
+        "mean_task_score": 1.0,
+        "mean_process_quality_score": 1.0,
+        "high_quality_passes": 2,
+        "all_required_files_read": 2,
+        "read_before_edit": 2,
+        "accessed_before_edit": 2,
+        "verified_after_edit": 2,
+        "agent_tool_used": 0
+      }
+    },
+    "explicit_subagent": {
+      "claude-opus-5": {
+        "n": 1,
+        "mean_task_score": 1.0,
+        "mean_process_quality_score": 1.0,
+        "high_quality_passes": 1,
+        "all_required_files_read": 1,
+        "read_before_edit": 1,
+        "accessed_before_edit": 1,
+        "verified_after_edit": 1,
+        "agent_tool_used": 1
+      },
+      "claude-opus-4-8": {
+        "n": 1,
+        "mean_task_score": 1.0,
+        "mean_process_quality_score": 1.0,
+        "high_quality_passes": 1,
+        "all_required_files_read": 1,
+        "read_before_edit": 1,
+        "accessed_before_edit": 1,
+        "verified_after_edit": 1,
+        "agent_tool_used": 1
+      }
+    }
+  },
+  "efficiency": [
+    {
+      "model": "claude-opus-4-8",
+      "runs": 11,
+      "total_cost_usd": 1.86011375,
+      "mean_cost_usd": 0.16910125,
+      "mean_wall_time_seconds": 32.224545454545456,
+      "mean_turns": 7.363636363636363
+    },
+    {
+      "model": "claude-opus-5",
+      "runs": 11,
+      "total_cost_usd": 2.26481875,
+      "mean_cost_usd": 0.20589261363636363,
+      "mean_wall_time_seconds": 36.91627272727272,
+      "mean_turns": 8.818181818181818
+    }
+  ],
+  "instruction_memory_runs": [
+    {
+      "model": "claude-opus-4-8",
+      "repeat": 1,
+      "task_score": 1.0,
+      "explicit_project_rule_pass": true,
+      "used_edit_tool": true,
+      "used_write_tool": false,
+      "all_required_files_read": true,
+      "verified_after_last_edit": true
+    },
+    {
+      "model": "claude-opus-4-8",
+      "repeat": 2,
+      "task_score": 1.0,
+      "explicit_project_rule_pass": true,
+      "used_edit_tool": true,
+      "used_write_tool": false,
+      "all_required_files_read": true,
+      "verified_after_last_edit": true
+    },
+    {
+      "model": "claude-opus-5",
+      "repeat": 1,
+      "task_score": 1.0,
+      "explicit_project_rule_pass": false,
+      "used_edit_tool": false,
+      "used_write_tool": true,
+      "all_required_files_read": true,
+      "verified_after_last_edit": true
+    },
+    {
+      "model": "claude-opus-5",
+      "repeat": 2,
+      "task_score": 1.0,
+      "explicit_project_rule_pass": false,
+      "used_edit_tool": false,
+      "used_write_tool": true,
+      "all_required_files_read": true,
+      "verified_after_last_edit": true
+    }
+  ]
+}

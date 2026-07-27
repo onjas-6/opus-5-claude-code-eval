@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-27T13:08:23-07:00",
+  "source_post_url": "https://x.com/HarukaKunori/status/2081697911847481502",
+  "source_files": [
+    "data/results-summary.json",
+    "data/compaction-summary.json"
+  ],
+  "rows": [
+    {
+      "rank": 1,
+      "claim": "会忽略 CLAUDE.md / 自动注入规则",
+      "verdict": "部分复现",
+      "evidence": "2/2 读完必需文档、通过隐藏测试并输出指定 marker；但 0/2 遵守“用 Edit 不用 Write”",
+      "observed_impact": "小 fixture 正确率无损；并发覆盖风险未量化",
+      "confidence": "中"
+    },
+    {
+      "rank": 2,
+      "claim": "抗拒读文件并臆测 cwd",
+      "verdict": "未复现",
+      "evidence": "Opus 5 在 11/11 run 写入前用 Read 打开全部必需文件；无错误路径假设",
+      "observed_impact": "无",
+      "confidence": "中"
+    },
+    {
+      "rank": 3,
+      "claim": "避开 Edit 且修改后不验证",
+      "verdict": "部分复现",
+      "evidence": "明确要求 Edit 时 0/2 遵守；但 11/11 最后写入后都验证",
+      "observed_impact": "无已观测正确率损失；安全风险待压力测试",
+      "confidence": "中"
+    },
+    {
+      "rank": 4,
+      "claim": "读完整文档仍漏掉中间章节",
+      "verdict": "未复现",
+      "evidence": "Section B 的 midnight/duration 隐藏规则 2/2 全部实现",
+      "observed_impact": "无",
+      "confidence": "低—中"
+    },
+    {
+      "rank": 5,
+      "claim": "第二次 compact 丢掉第一次之前的指令",
+      "verdict": "未复现",
+      "evidence": "1/1 会话两次真实 /compact 后精确恢复 26/26 键值；第二摘要覆盖 100%",
+      "observed_impact": "无",
+      "confidence": "低"
+    },
+    {
+      "rank": 6,
+      "claim": "会掩盖错误而不调查",
+      "verdict": "未复现",
+      "evidence": "瞬态 verify 失败后 2/2 重跑成功，并在最终答复明确说明首次失败",
+      "observed_impact": "无",
+      "confidence": "低—中"
+    },
+    {
+      "rank": 7,
+      "claim": "会把困难但未阻塞的 scope 留到以后",
+      "verdict": "未复现",
+      "evidence": "CSV/JSON/KV 三部分迁移 2/2 全部完成且隐藏测试通过",
+      "observed_impact": "无",
+      "confidence": "低—中"
+    },
+    {
+      "rank": 8,
+      "claim": "即使需要也难以触发 sub-agent",
+      "verdict": "未复现（显式请求）",
+      "evidence": "1/1 调用 Agent 两次并完成两个独立模块；主 agent 修正了子 agent 的错误附带判断",
+      "observed_impact": "最终产物无损",
+      "confidence": "低"
+    },
+    {
+      "rank": 9,
+      "claim": "拒绝 monitor，破坏长任务持久性",
+      "verdict": "未测试",
+      "evidence": "没有可重复的外部 callback/monitor fixture",
+      "observed_impact": "未知",
+      "confidence": "无"
+    },
+    {
+      "rank": 10,
+      "claim": "benchmark 分数欺诈 / 服务器负载导致退化",
+      "verdict": "超出范围",
+      "evidence": "本轮仅做 Claude Code task microeval，未复跑官方 benchmark，也未控制服务负载",
+      "observed_impact": "未知",
+      "confidence": "无"
+    }
+  ]
+}

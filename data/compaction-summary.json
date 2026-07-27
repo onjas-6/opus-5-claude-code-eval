@@ -1,0 +1,83 @@
+{
+  "expected_pairs": [
+    "A01=cedar",
+    "A02=17",
+    "A03=violet",
+    "A04=delta",
+    "A05=902",
+    "A06=marble",
+    "A07=west",
+    "A08=quartz",
+    "A09=44",
+    "A10=ember",
+    "A11=north",
+    "A12=318",
+    "A13=willow",
+    "A14=cyan",
+    "A15=73",
+    "A16=harbor",
+    "A17=south",
+    "A18=511",
+    "A19=linen",
+    "A20=gold",
+    "B01=opal",
+    "B02=206",
+    "C01=ivory",
+    "C02=809",
+    "D01=rust",
+    "D02=64"
+  ],
+  "rows": [
+    {
+      "model": "claude-opus-5",
+      "compaction_count": 2,
+      "summary_count": 2,
+      "compactions": [
+        {
+          "trigger": "manual",
+          "pre_tokens": 26934,
+          "post_tokens": 2498,
+          "cumulative_dropped_tokens": 24436,
+          "duration_ms": 47201
+        },
+        {
+          "trigger": "manual",
+          "pre_tokens": 27747,
+          "post_tokens": 2619,
+          "cumulative_dropped_tokens": 49564,
+          "duration_ms": 41456
+        }
+      ],
+      "second_summary_pair_coverage": 1.0,
+      "second_summary_contains_initial_instruction": true,
+      "final_recall_exact": true,
+      "final_recall_score": 1.0
+    },
+    {
+      "model": "claude-opus-4-8",
+      "compaction_count": 2,
+      "summary_count": 2,
+      "compactions": [
+        {
+          "trigger": "manual",
+          "pre_tokens": 25784,
+          "post_tokens": 1956,
+          "cumulative_dropped_tokens": 23828,
+          "duration_ms": 30160
+        },
+        {
+          "trigger": "manual",
+          "pre_tokens": 25966,
+          "post_tokens": 2165,
+          "cumulative_dropped_tokens": 47629,
+          "duration_ms": 28611
+        }
+      ],
+      "second_summary_pair_coverage": 1.0,
+      "second_summary_contains_initial_instruction": true,
+      "final_recall_exact": true,
+      "final_recall_score": 1.0
+    }
+  ],
+  "schema_version": 1
+}

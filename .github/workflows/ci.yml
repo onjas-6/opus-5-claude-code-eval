@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile harness
+        run: python -m py_compile eval/run_eval.py eval/score_compaction.py
+      - name: Validate JSON artifacts
+        run: |
+          python -m json.tool data/results-summary.json >/dev/null
+          python -m json.tool data/compaction-summary.json >/dev/null
+          python -m json.tool data/claim-assessment.json >/dev/null
+          python -m json.tool data/test-design.json >/dev/null
+          python -m json.tool artifact.json >/dev/null
+      - name: Check published result invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          agent = json.loads(Path("data/results-summary.json").read_text())
+          compact = json.loads(Path("data/compaction-summary.json").read_text())
+          assert set(agent["models"]) == {"claude-opus-5", "claude-opus-4-8"}
+          assert all(row["mean_task_score"] == 1 for row in agent["by_model"].values())
+          assert all(row["verified_after_edit_rate"] == 1 for row in agent["by_model"].values())
+          assert len(compact["rows"]) == 2
+          assert all(row["compaction_count"] == 2 for row in compact["rows"])
+          assert all(row["final_recall_exact"] for row in compact["rows"])
+          PY

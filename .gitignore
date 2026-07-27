@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+eval/runs/
+eval/results.json
+data/compaction-local.json
+*.jsonl
+*.stderr
+*.stdout
