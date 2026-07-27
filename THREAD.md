@@ -26,7 +26,7 @@ Opus 5 used the built-in Read tool on every required file before editing in 11/1
 
 ## 5/9
 
-One negative signal *did* reproduce: tool choice.
+One negative signal did reproduce: tool choice.
 
 In two runs, CLAUDE.md explicitly required Edit rather than whole-file Write. Opus 5 ignored that rule 2/2 times; Opus 4.8 followed it 2/2 times.
 
